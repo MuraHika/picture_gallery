@@ -114,6 +114,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .select_picture .Select {
+    padding-right: 10px !important;
     display: flex;
     flex-direction: row;
     align-items: center;

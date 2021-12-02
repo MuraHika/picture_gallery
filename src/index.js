@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import './components/PicturePageDark.css';
+// import './components/PicturePageDark.css';
+import './components/PicturesPage.scss'
 import App from './App';
 
 ReactDOM.render(

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Select, Input, Pagination, Range} from 'fwt-internship-uikit'
-import "./PictureCard.css";
+import "./PictureCard.scss";
 
 class PictureCard extends React.Component {
 
