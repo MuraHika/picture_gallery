@@ -1,12 +1,11 @@
-// import './App.css';
 import React from "react";
-import './components/PicturesPage.scss'
-import PicturePage from "./components/PicturesPage";
+import './components/Gallery/Gallery.scss';
+import Gallery from "./components/Gallery/Gallery";
 
 function App() {
   return (
     <div>
-      <PicturePage />
+      <Gallery />
     </div>
   );
 }

@@ -1,16 +1,13 @@
 import React, { Component } from 'react'
 import Enumerable from 'linq'
-import {Select, Input, Pagination, Range} from 'fwt-internship-uikit'
-import PictureCard from "./PictureCard"
-import './PicturesPage.scss';
-import im1 from '../assets/2.jpg'
-import im2 from '../assets/im.png'
-import Logo_icon from '../assets/Frame.svg'
-import Light_dark_switch from '../assets/light_dark_switch.svg'
-import Arrow from '../assets/arrow.svg'
-// import './PicturePageDark.css'
+import {Select, Input, Pagination} from 'fwt-internship-uikit'
+import Card from "../Card/Card"
+import './Gallery.scss';
+import Logo_icon from '@assets/Frame.svg'
+import Light_dark_switch from '@assets/light_dark_switch.svg'
+import SelectCreated from "../SelectCreated/SelectCreated";
 
-class PicturePage extends React.Component {
+class Gallery extends React.Component {
 
     constructor(props) {
         super(props);
@@ -28,7 +25,7 @@ class PicturePage extends React.Component {
         }
     }
 
-    request = () => {
+    request = (e) => {
         const header = {
             method: 'GET',
             headers: {'Content-Type': 'application/json'},
@@ -37,7 +34,7 @@ class PicturePage extends React.Component {
         }
 
         console.log(this.state.currentPage);
-        fetch(`https://test-front.framework.team/paintings?_page=${this.state.currentPage}&_limit=${this.state.countPaintingsOnPage}`, header)
+        fetch(`https://test-front.framework.team/paintings?_page=${e}&_limit=${this.state.countPaintingsOnPage}`, header)
             .then(response => response.json())
             .then(
                 (data) => {
@@ -69,9 +66,7 @@ class PicturePage extends React.Component {
         this.updateWindowDimensions();
         window.addEventListener('resize', this.updateWindowDimensions);
 
-        console.log(this.state.window_width);
         const count = this.updateCountPainting();
-        console.log(this.state.countPaintingsOnPage);
         const header = {
             method: 'GET',
             headers: {'Content-Type': 'application/json'},
@@ -113,7 +108,6 @@ class PicturePage extends React.Component {
     }
 
     updateWindowDimensions = () => {
-
         this.setState({ window_width: window.innerWidth });
         this.updateCountPainting();
         console.log(this.state.window_width);
@@ -121,9 +115,8 @@ class PicturePage extends React.Component {
 
 
     selectPage = (e) => {
-        console.log(e);
         this.setState({currentPage: e});
-        this.request();
+        this.request(e);
     }
 
     changeTheme = () => {
@@ -133,16 +126,10 @@ class PicturePage extends React.Component {
 
     selectCreated = () => {
         let popup = document.getElementById('select_popup_created');
-        let select = document.getElementById('select_created');
-        console.log(popup.style.display);
         if (popup.style.display === 'none') {
-            console.log('flex');
             popup.style.display = 'flex';
-            // select.style.height = 'fit-content';
         } else {
-            console.log('none');
             popup.style.display = 'none';
-            select.style.height = '45px';
         }
     }
 
@@ -175,15 +162,7 @@ class PicturePage extends React.Component {
                         </div>
 
                         <div className={`select_picture ${this.state.theme}`} onClick={this.selectCreated} id={'select_created'}>
-                            <div className={'Select'} >
-                                <span>Created</span>
-                                <div className={'Select__arrow'}><Arrow/></div>
-                                <div className={'select_popup_created'} id={'select_popup_created'} style={{display: 'none'}}>
-                                     <Input className={`select_created ${this.state.theme}`} placeholder={'from'}/>
-                                     <div className={'select_line'}></div>
-                                     <Input className={`select_created ${this.state.theme}`} placeholder={'before'}/>
-                                </div>
-                            </div>
+                            <SelectCreated theme={this.state.theme}/>
                         </div>
                     </div>
 
@@ -191,9 +170,8 @@ class PicturePage extends React.Component {
                         <div className={`pictures_gallery ${this.state.theme}`}>
                             {this.state.paintings.map(el => {
                                 if(this.state.locations.length > 0 ){
-                                    return <PictureCard
-                                        // src_img={el.imageUrl}
-                                        src_img={im1}
+                                    return <Card
+                                        src_img={'https://test-front.framework.team' + el.imageUrl}
                                         picture={el.name}
                                         author={Enumerable.from(this.state.authors).where(el_auth => el_auth.id === el.authorId).select(author => author.name).first()}
                                         year={el.created}
@@ -213,4 +191,4 @@ class PicturePage extends React.Component {
     }
 }
 
-export default PicturePage;
+export default Gallery;

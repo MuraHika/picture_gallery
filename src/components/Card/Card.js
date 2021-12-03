@@ -1,12 +1,7 @@
-import React, { Component } from 'react'
-import {Select, Input, Pagination, Range} from 'fwt-internship-uikit'
-import "./PictureCard.scss";
+import React from 'react';
+import "./Card.scss";
 
-class PictureCard extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
+class Card extends React.Component {
 
     render() {
         return (
@@ -31,4 +26,4 @@ class PictureCard extends React.Component {
     }
 }
 
-export default PictureCard;
+export default Card;

@@ -15,10 +15,9 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "webpack serve --config ./src/webpack.config.js --open",
-    "build": "webpack --config ./src/webpack.config.js",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "webpack serve --config webpack.config.js --open",
+    "build": "webpack --config webpack.config.js",
+    "lint": "eslint \"./src/components/Gallery/*\""
   },
   "eslintConfig": {
     "extends": [
@@ -40,13 +39,25 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.5.4",
+    "@babel/eslint-plugin": "^7.14.5",
+    "@babel/plugin-syntax-jsx": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
     "@svgr/webpack": "^5.5.0",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb": "^19.0.2",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.5.0",
     "sass": "^1.44.0",
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
