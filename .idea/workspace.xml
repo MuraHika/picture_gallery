@@ -16,15 +16,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19d96d73-73a3-4d6a-8dd3-4c390e6abea1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Gallery/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Gallery/Gallery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SelectCreated/SelectCreated.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SelectCreated/SelectCreated.js" afterDir="false" />
-    </list>
+    <list default="true" id="19d96d73-73a3-4d6a-8dd3-4c390e6abea1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +138,7 @@
       <workItem from="1638257477720" duration="8011000" />
       <workItem from="1638339011213" duration="20173000" />
       <workItem from="1638426194309" duration="21632000" />
-      <workItem from="1638511725128" duration="14377000" />
+      <workItem from="1638511725128" duration="14766000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1637825346893</created>
@@ -190,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638528489736</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="eslintrc.json update">
+      <created>1638530850204</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1638530850204</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,10 +265,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1637829561322" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1638528497202">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1638530854377">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1638528497202" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1638530854377" />
     <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1637825935905">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
