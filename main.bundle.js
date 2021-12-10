@@ -198,7 +198,7 @@ class Gallery extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       authors: [],
       locations: [],
       currentPage: 1,
-      countPaintingsOnPage: window.innerWidth >= 1024 ? 9 : window.innerWidth >= 768 ? 8 : 6,
+      countPaintingsOnPage: window.innerWidth >= 1024 ? 9 : window.innerWidth >= 500 ? 8 : 6,
       select_author: 'Author',
       select_location: 'Location',
       theme: 'light',
@@ -245,19 +245,19 @@ class Gallery extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
   updateCountPainting = () => {
     let count = 0;
 
-    if (this.state.window_width >= 1024) {
+    if (this.state.window_width >= 768) {
       count = 9;
       this.setState({
         countPaintingsOnPage: count
       });
       this.request();
-    } else if (this.state.window_width >= 768 && this.state.window_width < 1024) {
+    } else if (this.state.window_width >= 500 && this.state.window_width < 768) {
       count = 8;
       this.setState({
         countPaintingsOnPage: count
       });
       this.request();
-    } else if (this.state.window_width < 768) {
+    } else if (this.state.window_width < 500) {
       count = 6;
       this.setState({
         countPaintingsOnPage: count
