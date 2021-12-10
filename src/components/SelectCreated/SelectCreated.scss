@@ -3,6 +3,10 @@
   height: 45px;
 }
 
+.select__title {
+  width: inherit;
+}
+
 .select__popup {
   //display: flex;
   justify-content: center;
@@ -13,9 +17,10 @@
   padding-top: 1em;
   margin: 0;
 
-  position: absolute;
+  //position: absolute;
   z-index: 30;
-  top: 12em;
+  //top: 12em;
+  margin-top: 4px;
   box-shadow:  0px 0px 0px 1px var(--theme-second-color);
   box-sizing: border-box;
   //border: 1px solid var(--theme-second-color);
@@ -44,7 +49,7 @@
 }
 
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 500px) {
 
   .select__popup {
     top: 25em;
@@ -56,7 +61,7 @@
   }
 }
 
-@media only screen and (min-width: 321px) and (max-width: 768px) {
+@media only screen and (min-width: 501px) and (max-width: 768px) {
 
   .select__popup {
     flex-direction: column;
