@@ -3,7 +3,8 @@
   height: 45px;
 }
 
-.select_popup_created {
+.select__popup {
+  //display: flex;
   justify-content: center;
   flex-direction: row;
   width: inherit;
@@ -24,7 +25,7 @@
   border-top: 1px solid var(--theme-color);
 }
 
-.select_created {
+.select__popup__range {
   width: 95px;
   height: 45px;
   background: var(--theme-input-in-select-color);
@@ -34,7 +35,7 @@
   padding-left: 0.5em;
 }
 
-.select_line {
+.select__popup__line {
   width: 12px;
   height: 0px;
   margin-bottom: 10px;
@@ -45,11 +46,11 @@
 
 @media only screen and (max-width: 320px) {
 
-  .select_popup_created {
+  .select__popup {
     top: 25em;
   }
 
-  .select_line {
+  .select__popup__line {
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -57,21 +58,21 @@
 
 @media only screen and (min-width: 321px) and (max-width: 768px) {
 
-  .select_popup_created {
+  .select__popup {
     flex-direction: column;
   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
 
-  .select_popup_created {
+  .select__popup {
     flex-direction: column;
   }
 }
 
 @media only screen and (min-width: 1025px) and (device-width: 1366px) {
 
-  .select_line {
+  .select__popup__line {
     margin-left: 10px;
     margin-right: 10px;
   }

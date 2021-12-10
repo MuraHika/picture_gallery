@@ -6,13 +6,13 @@ import { Input } from "fwt-internship-uikit";
 class SelectCreated extends React.Component {
     render() {
         return (
-          <div className="Select">
-            <span>Created</span>
+          <div id="select_range" className="Select">
+            <span id="select_range_span">Created</span>
             <div className="Select__arrow"><Arrow /></div>
-            <div className="select_popup_created" id="select_popup_created" style={{ display: 'none' }}>
-              <Input className={`select_created ${this.props.theme}`} placeholder="from" />
-              <div className="select_line" />
-              <Input className={`select_created ${this.props.theme}`} placeholder="before" />
+            <div className="select__popup" id="select_popup_range" style={{ display: 'none' }}>
+              <Input id="select_range_input_from" className={`select__popup__range ${this.props.theme}`} placeholder="from" />
+              <div className="select__popup__line" />
+              <Input id="select_range_input_before" className={`select__popup__range ${this.props.theme}`} placeholder="before" />
             </div>
           </div>
         );

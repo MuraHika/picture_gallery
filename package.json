@@ -2,6 +2,7 @@
   "name": "picture_gallery",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://MuraHika.github.io/picture_gallery",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",
@@ -16,8 +17,10 @@
   },
   "scripts": {
     "start": "webpack serve --config webpack.config.js --open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d ./src/dist",
     "build": "webpack --config webpack.config.js",
-    "lint": "npx eslint ./src/components"
+    "lint": "npx eslint ./src/components --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +59,7 @@
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.5.0",
     "prettier": "^2.5.0",
     "sass": "^1.44.0",
